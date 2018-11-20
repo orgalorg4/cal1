@@ -5,9 +5,9 @@
 void vMotorInit(){
 
 	GPIO_u8SetPortPin(PORT_A,9,DIGITAL,OUTPUT);
-	PWM2_vInit();
+	PWM1_vInit();
 }
-void vSetMotorDir(T_U8  u8Dir){
+void vSetMotorDir(T_U8 u8Dir){
 	switch(u8Dir){
 		case INAINTE:
 		GPIO_u8WritePortPin(PORT_A,9,HIGH);
@@ -19,7 +19,7 @@ void vSetMotorDir(T_U8  u8Dir){
 }
 void vSetMotorSpeed(T_U8 u8Speed){
 	if(u8Speed>=0 && u8Speed<=100)
-		PWM2_vSetDuty(u8Speed);
+		PWM1_vSetDuty(u8Speed,2);
 }
 void vSetMotorDirSpeed(T_U8 u8Dir,T_U8 u8Speed){
 	vSetMotorDir(u8Dir);
