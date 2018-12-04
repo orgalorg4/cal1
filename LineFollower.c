@@ -15,10 +15,10 @@ void LF_vWritePins(void)
 }
 T_U8 LF_u8ReadPins(void)
 {
-	LF_vSetPinsDir(OUT);
+	LF_vSetPinsDir(OUTPUT);
 	LF_vWritePins();
 	__delay_us(10);
-	LF_vSetPinsDir(IN);
+	LF_vSetPinsDir(INPUT);
 	__delay_us(250);
-	return GPIO_u16ReadPort(PORT_C);
+	return GPIO_u16ReadPort(PORT_C)&0x3F;
 }
