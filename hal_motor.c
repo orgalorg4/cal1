@@ -10,10 +10,10 @@ void vMotorInit(){
 void vSetMotorDir(T_U8 u8Dir){
 	switch(u8Dir){
 		case INAINTE:
-		GPIO_u8WritePortPin(PORT_A,9,HIGH);
+		GPIO_u8WritePortPin(PORT_A,9,LOW);
 			break;
 		case INAPOI:
-		GPIO_u8WritePortPin(PORT_A,9,LOW);		
+		GPIO_u8WritePortPin(PORT_A,9,HIGH);		
 			break;
 	}
 }

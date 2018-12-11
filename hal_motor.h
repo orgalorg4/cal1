@@ -5,8 +5,8 @@
 #include "general_types.h"
 
 //directie
-#define INAINTE 1
-#define INAPOI 0
+#define INAINTE 0
+#define INAPOI 1
 
 void vMotorInit();
 void vSetMotorDir(T_U8 u8Dir);

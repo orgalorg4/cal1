@@ -6,9 +6,13 @@
 
 int main()
 {
-	
-    //vMotorInit();
-	//vSetMotorDirSpeed(INAINTE,50);
+	TASK_Inits();
+    vMotorInit();
+	vServoInit();
+
+
+	TASK_vSchedule();
+
 	/*
 	T_U16 i;
 
@@ -23,10 +27,11 @@ int main()
 	}
 	*/
 
-	vServoInit();
 
     while(1)
     {
+
+/*
 		T_U8 u8SensorValues = LF_u8ReadPins();
 
 		T_U8 i,e=0,e2;
