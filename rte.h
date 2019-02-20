@@ -1,6 +1,7 @@
 #include "hal_motor.h"
 #include "hal_servo.h"
 #include "LineFollower.h"
+#include "hal_battery.h"
 
 #ifndef __rte__HEADER__
 #define __rte__HEADER__

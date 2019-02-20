@@ -3,5 +3,6 @@
 
 T_U8 readline();
 void go();
+void battery();
 
 #endif

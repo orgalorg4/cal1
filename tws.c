@@ -1,5 +1,7 @@
 #include "rte.h"
 
+#include "general.h"
+
 T_U8 readline()
 {
 	T_U8 on_line = 0;
@@ -37,4 +39,12 @@ void go()
 	T_U8 angle = sensors +65;
 	RTE_vSetServoAngle(angle);
 	RTE_vSetMotorDirSpeed(INAINTE,25);
+}
+
+
+void battery()
+{
+    T_F16 p=BAT_f16GetLevel();
+    
+    if(p<90) LEDr_TOG;
 }

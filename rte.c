@@ -19,7 +19,8 @@ void RTE_TASK_10ms()
 }
 void RTE_TASK_100ms()
 {
-	go();
+//	go();
+//    battery();
 }
 void RTE_TASK_500ms()
 {

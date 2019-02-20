@@ -1,8 +1,22 @@
 #include "general.h"
 #include "general_types.h"
+#include "sys_tasks.h"
+#include "sys_schedule.h"
 #include "hal_motor.h"
 #include "hal_servo.h"
 #include "LineFollower.h"
+#include "hal_battery.h"
+
+// FICD
+#pragma config ICS = PGD2               // Comm Channel Select (Communicate on PGC2/EMUC2 and PGD2/EMUD2)
+#pragma config JTAGEN = ON              // JTAG Port Enable (JTAG is Enabled)
+
+// #pragma config statements should precede project file includes.
+// Use project enums instead of #define for ON and OFF.
+
+#include <xc.h>
+
+T_U8 p;
 
 int main()
 {
@@ -11,7 +25,7 @@ int main()
 	vServoInit();
 
 
-	TASK_vSchedule();
+	//TASK_vSchedule();
 
 	/*
 	T_U16 i;
@@ -30,7 +44,7 @@ int main()
 
     while(1)
     {
-
+        p=BAT_f16GetLevel();
 /*
 		T_U8 u8SensorValues = LF_u8ReadPins();
 
