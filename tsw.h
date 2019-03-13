@@ -4,5 +4,7 @@
 T_U8 readline();
 void go();
 void battery();
+void LineAndStop();
+void caramida();
 
 #endif

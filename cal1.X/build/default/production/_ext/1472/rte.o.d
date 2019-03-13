@@ -6,4 +6,5 @@ build/default/production/_ext/1472/rte.o:  \
 ../hal_servo.h  \
 ../LineFollower.h  \
  ../hal_battery.h  \
+../hal_encoder.h  \
 ../tsw.h 

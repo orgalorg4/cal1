@@ -2,6 +2,7 @@
 #include "hal_servo.h"
 #include "LineFollower.h"
 #include "hal_battery.h"
+#include "hal_encoder.h"
 
 #ifndef __rte__HEADER__
 #define __rte__HEADER__

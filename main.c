@@ -25,7 +25,7 @@ int main()
 	vServoInit();
 
 
-	//TASK_vSchedule();
+	TASK_vSchedule();
 
 	/*
 	T_U16 i;
@@ -44,7 +44,7 @@ int main()
 
     while(1)
     {
-        p=BAT_f16GetLevel();
+//        p=BAT_f16GetLevel();
 /*
 		T_U8 u8SensorValues = LF_u8ReadPins();
 
