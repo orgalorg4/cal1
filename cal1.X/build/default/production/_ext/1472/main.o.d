@@ -7,4 +7,5 @@ build/default/production/_ext/1472/main.o:  \
 ../sys_schedule.h  \
  ../hal_motor.h  \
 ../hal_servo.h  \
-../LineFollower.h 
+../LineFollower.h  \
+../hal_battery.h 

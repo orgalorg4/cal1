@@ -22,3 +22,13 @@ T_U8 LF_u8ReadPins(void)
 	__delay_us(250);
 	return GPIO_u16ReadPort(PORT_C)&0x3F;
 }
+BOOL LF_bReadPin(T_U8 sensor)
+{
+    //0 pt drepta
+    T_U8 value = LF_u8ReadPins();
+    if(sensor>=0 && sensor <6)
+        if((1<<sensor)&value)
+            return 1;
+    return 0;
+    
+}

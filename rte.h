@@ -2,6 +2,11 @@
 #include "hal_servo.h"
 #include "LineFollower.h"
 #include "hal_battery.h"
+#include "hal_encoder.h"
+#include "hal_nRF.h"
+
+//aplication
+#include "asw_com.h"
 
 #ifndef __rte__HEADER__
 #define __rte__HEADER__
@@ -28,7 +33,16 @@ void RTE_TASK_1000ms();
 #define RTE_LF_vSetPinsDir(bDir) LF_vSetPinsDir(bDir)
 #define RTE_LF_vWritePins(void) LF_vWritePins(void)
 #define RTE_LF_u8ReadPins(void) LF_u8ReadPins(void)
+#define RTE_LF_bReadPinb(sensor) LF_bReadPin(sensor)
+
+
+//RADIO
+#define RTE_RF_vBeginReceive(void) RF_vBeginReceive(void)
+#define RTE_RF_vBeginTransmit(u8Message) RF_vBeginTransmit(u8Message)
+#define RTE_RF_vCheckIRQ(void) RF_vCheckIRQ(void)
 /*
+#define RTE_
+#define RTE_
 #define RTE_
 #define RTE_
 #define RTE_

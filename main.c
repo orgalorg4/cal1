@@ -21,11 +21,10 @@ T_U8 p;
 int main()
 {
 	TASK_Inits();
-    vMotorInit();
-	vServoInit();
+    
 
 
-	//TASK_vSchedule();
+	TASK_vSchedule();
 
 	/*
 	T_U16 i;
@@ -44,7 +43,7 @@ int main()
 
     while(1)
     {
-        p=BAT_f16GetLevel();
+//        p=BAT_f16GetLevel();
 /*
 		T_U8 u8SensorValues = LF_u8ReadPins();
 
@@ -63,7 +62,7 @@ int main()
 		if(e2<65)e2=65;
 
 		vSetServoAngle(e2);
-		/*	
+		
 		T_U8 u8Angle;// = u8SensorValues+60;
 
 		if(u8SensorValues==0)u8Angle=110;

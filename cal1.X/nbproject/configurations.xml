@@ -23,6 +23,10 @@
       <itemPath>../rte.h</itemPath>
       <itemPath>../tsw.h</itemPath>
       <itemPath>../hal_battery.h</itemPath>
+      <itemPath>../hal_encoder.h</itemPath>
+      <itemPath>../asw_com.h</itemPath>
+      <itemPath>../hal_nRF.h</itemPath>
+      <itemPath>../asw_statem.h</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"
@@ -49,6 +53,10 @@
       <itemPath>../rte.c</itemPath>
       <itemPath>../tws.c</itemPath>
       <itemPath>../hal_battery.c</itemPath>
+      <itemPath>../hal_encoder.c</itemPath>
+      <itemPath>../asw_com.c</itemPath>
+      <itemPath>../hal_nRF.c</itemPath>
+      <itemPath>../asw_statem.c</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
@@ -73,7 +81,7 @@
         <platform>3</platform>
       </toolsSet>
       <packs>
-        <pack name="dsPIC33F-GP-MC_DFP" vendor="Microchip" version="1.0.5"/>
+        <pack name="dsPIC33F-GP-MC_DFP" vendor="Microchip" version="1.0.6"/>
       </packs>
       <compileType>
         <linkerTool>
@@ -223,6 +231,7 @@
         <property key="save-temps" value="false"/>
       </C30Global>
       <PICkit3PlatformTool>
+        <property key="firmware.download.all" value="false"/>
         <property key="tracecontrol.disablemacros" value="true"/>
         <property key="tracecontrol.medium" value="0"/>
         <property key="tracecontrol.select" value="0"/>

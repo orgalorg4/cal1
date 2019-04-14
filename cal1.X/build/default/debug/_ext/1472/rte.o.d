@@ -6,4 +6,8 @@ build/default/debug/_ext/1472/rte.o:  \
 ../hal_servo.h  \
 ../LineFollower.h  \
 ../hal_battery.h  \
- ../tsw.h 
+ ../hal_encoder.h  \
+../hal_nRF.h  \
+../asw_com.h  \
+../tsw.h  \
+../asw_statem.h 

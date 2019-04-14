@@ -10,7 +10,7 @@ extern BOOL bRF_IRQ;
 
 /* Flag set in INT0, by the Obstacle Sensor Module. (Pin goes LOW when obstacle is detected) */
 BOOL bObstDetected;
-
+extern BOOL bObstDetectedExtern;
 
 
 /* Obstacle sensor interrupt */
@@ -36,6 +36,8 @@ void __attribute__((__interrupt__, no_auto_psv)) _INT0Interrupt(void)
         /* wait for NEG EDGE */
         INTCON2bits.INT0EP = NEG_EDGE;
     }
+    bObstDetectedExtern=bObstDetected;
+    
 }
 
 
@@ -154,5 +156,13 @@ void INT2_vInit(T_U8 u8Priority)
 }
 
 
-
+//vovid INTO_vSetPolarity(BOOL bPolarity)
+//{
+//    
+//}
+//
+//BOOL INT0_bGetPolarity()
+//{
+//    
+//}
 

@@ -17,16 +17,24 @@ void TASK_Inits()
     MCAL_vInit();
     GPIO_u8SetPortPin(PORT_A, 10, DIGITAL, OUTPUT);	
 
+    vMotorInit();
+	vServoInit();
+    RF_vInit();
 	RTE_TASK_Inits();
 }
 
 void TASK_1ms()
 {
 	RTE_TASK_1ms();
+    
+    COM_vStartListening();
+    COM_vCheckIRQ();
+    COM_vProcessFIFO(); 
 }
 
 void TASK_5ms()
 {
+//    test_vReceiver();
 	RTE_TASK_5ms();
 }
 
@@ -47,5 +55,18 @@ void TASK_500ms()
 
 void TASK_1000ms()
 {
-	RTE_TASK_1000ms();
+//    RTE_vSetMotorDirSpeed(INAINTE,25);
+//    LEDr_TOG
+//	RTE_TASK_1000ms();
+    
+//    test_vTransmitter(); 
+//    static int i=0;
+//    if(i==7)
+//    {
+//        
+//        COM_vSendMessage(0x50);
+//        i=0;
+//        
+//    }
+//    i++;
 }
